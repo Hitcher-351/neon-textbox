@@ -1,0 +1,88 @@
+/* Variables */
+:root {
+    --body-color-dark: #020022;
+    --body-color-light: aliceblue;
+    --neon-green-light: #39ff14;
+    --neon-green-dark: #1dbe00;
+    --textbox-border-radius: 10px 0 10px 0;
+}
+
+/* General Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+}
+
+/* Display and Container */
+
+.positioner {
+    height: 100vh;
+    display: flex;
+}
+
+.textbox-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 50%;
+}
+
+.textbox-container.light {
+    background-color: var(--body-color-light);
+}
+
+.textbox-container.dark {
+    background-color: var(--body-color-dark);
+}
+
+.neon-label {
+    color: var(--neon-green-light);
+    font-size: 24px;
+    text-shadow: 0 0 3px var(--neon-green-light);
+    padding: 15px;
+}
+
+.textbox-container.light .neon-label {
+    color: var(--neon-green-dark);
+    text-shadow: 0 0 3px var(--neon-green-dark);
+}
+
+.neon-textbox {
+    background-color: transparent;
+    border: 2px solid var(--neon-green-dark);
+    border-radius: var(--textbox-border-radius);
+    box-shadow: 0 0 5px 0 var(--neon-green-dark), 0 0 5px 0 var(--neon-green-dark) inset;
+    transition: 350ms;
+    padding: 20px;
+    color: aliceblue;
+}
+
+.neon-textbox:hover {
+    border: 2px solid var(--neon-green-dark);
+    box-shadow: 0 0 5px 2px var(--neon-green-dark), 0 0 5px 2px var(--neon-green-dark) inset;
+}
+
+.neon-textbox:active,
+.neon-textbox:focus {
+    outline: none;
+    border-radius: 20px 0 20px 0;
+    border: 4px solid var(--neon-green-light);
+    box-shadow: 0 0 5px 2px var(--neon-green-light), 0 0 5px 2px var(--neon-green-light) inset;
+}
+
+/* Queries for Mobile View */
+
+@media screen and (max-width: 800px) {
+    .positioner {
+        flex-direction: column;
+    }
+
+    .button-container {
+        flex: 100%;
+    }
+}
