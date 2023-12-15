@@ -40,6 +40,8 @@ body {
     background-color: var(--body-color-dark);
 }
 
+/* Textbox Label */
+
 .neon-label {
     color: var(--neon-green-light);
     font-size: 28px;
@@ -52,6 +54,8 @@ body {
     color: var(--neon-green-dark);
     text-shadow: 0 0 3px var(--neon-green-dark);
 }
+
+/* Textbox Style */
 
 .neon-textbox {
     background-color: transparent;
